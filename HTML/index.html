@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-100 overflow-x-hidden">
+    <!-- header and banner  -->
+    <header>
+        <!-- header menu and logo -->
+        <div class="bg-orange-400 flex justify-between items-center h-16">
+            <p class="ml-20 text-white font-semibold text-xl"><span>&#127860;</span>MEAL FINDER</p>
+
+            <button class="mr-20 relative">
+                <!-- icon for show menu  -->
+                <img src="../Assests/bars-solid-full.svg" alt="Menu" class="w-8 cursor-pointer" id="menuBar">
+                <!-- list of menu  -->
+                <nav id="navBar" class="w-75 h-auto bg-white z-50 absolute top-0 right-0 hidden">
+                    <ul class="w-full flex flex-wrap flex-col items-start" id="menuList">
+                        <li><img src="../Assests/circle-xmark-regular-full.svg" alt="cross"
+                                class="w-8 mr-5 mt-5 cursor-pointer ml-55" id="cross"></li>
+                    </ul>
+                </nav>
+
+            </button>
+        </div>
+
+
+        <!-- banner with search bar and headings -->
+        <section class="relative w-full h-150">
+            <!-- banner background image -->
+            <div>
+                <img src="../Assests/bg-header.webp" alt="" class="w-full h-150">
+            </div>
+
+            <!-- banner opacity layer to make it dark -->
+            <div class="h-150 w-full bg-black absolute top-0 opacity-50"></div>
+
+            <!-- search bar and headings on banner, top most layer -->
+            <div class="w-full h-150 content-center text-center absolute top-0 z-40 text-white">
+                <!-- search bar -->
+                <p class="flex flex-row justify-center items-center gap-4"><input type="search"
+                        placeholder="Search recipes here...."
+                        class="border-2 border-white rounded-3xl bg-white text-gray-600 w-75 h-10 p-3"
+                        id="searchInput"><button
+                        class="border-2 h-10 w-10 bg-orange-400 rounded-3xl cursor-pointer hover:bg-transparent"
+                        id="searchImg"><img src="../Assests/magnifying-glass-solid-full.svg" alt=""
+                            class="w-7 pl-2"></button>
+                </p>
+
+                <!-- headings -->
+                <p class="text-4xl font-semibold my-6">What are your favorite cuisines ?</p>
+                <p class="text-lg font-thin">PERSONALIZE YOUR EXPERIENCE</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="mealsBySearchSection" class="hidden m-10">
+            <!-- meals heading and underline -->
+            <h2 class="font-semibold text-xl tracking-widest">MEALS</h2>
+            <hr class="text-orange-400 w-15 mb-15 border-2">
+
+            <!-- meals pics and its names -->
+            <section id="mealsOfCategory" class="flex flex-wrap items-center gap-5"></section>
+        </section>
+
+
+        <section class="mt-30 mx-5 mb-10">
+            <h2 class="font-semibold text-xl tracking-widest">CATEGORIES</h2>
+            <hr class="text-orange-400 w-15 mb-15 border-2">
+            <div id="categorySection" class="flex flex-wrap items-center gap-4"></div>
+        </section>
+    </main>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>
