@@ -3,7 +3,7 @@
 const categoryApi = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
 // search  and filter 
-const mealByName = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+// const mealByName = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
 const filterByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 
@@ -95,7 +95,7 @@ document.getElementById('cross').addEventListener('click', hidebar);
 const url = new URLSearchParams(window.location.search);
 
 let category = url.get('id');
-let individualApi = mealByName + category;
+let individualApi = filterByCategory + category;
 console.log(individualApi);
 
 const filterTitle = document.getElementById('filterTitle');
